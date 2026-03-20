@@ -1,0 +1,29 @@
+[package]
+name = "twa_render"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+
+[dependencies]
+# Discord bot
+poise = "0.6"
+serenity = { version = "0.12", features = ["client", "gateway", "model"] }
+tokio = { version = "1", features = ["full"] }
+
+# WoWS replay parsing & rendering
+wows_minimap_renderer = { git = "https://github.com/landaire/wows-toolkit", default-features = false, features = ["rendering", "cpu", "arc"] }
+wows_replays = { git = "https://github.com/landaire/wows-toolkit", default-features = false, features = ["parsing", "arc"] }
+wowsunpack = { git = "https://github.com/landaire/wows-toolkit", default-features = false, features = ["json", "vfs", "parsing", "rkyv"] }
+wt-translations = { git = "https://github.com/landaire/wows-toolkit" }
+
+# Utilities
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+tempfile = "3"
+dotenvy = "0.15"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+gettext = "0.4"
+rkyv = { version = "0.8", features = ["std"] }
+toml = "0.8"

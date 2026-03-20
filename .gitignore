@@ -1,0 +1,11 @@
+/target
+.env
+*.mp4
+*.wowsreplay
+
+# Extracted game data
+*.rkyv
+metadata.toml
+15.*/
+vfs/
+translations/
